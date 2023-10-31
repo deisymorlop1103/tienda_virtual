@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+ <title>productos</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <style>
     /*En este ejemplo, hemos utilizado CSS flexbox para que los cards se muestren horizontalmente en la clase .contenedor. 
@@ -24,14 +24,36 @@
     .card {
       margin: 5px; /* Agrega un margen entre los cards */
 	  border: 1px solid #c1c2ca;
-	  padding: 16px;
+	  padding: 12px;
 	  border-radius: 20px;
     }
+	   background{
+		  background: linear-gradient(90deg, rgba(224,223,232,1) 0%, rgba(234,234,244,1) 35%, rgba(229,243,246,1) 100%);
+	  }
+    .nav-inicio{
+         background:#0a0a77;
+	 color:white;
+	    margin-bottom:12px;
+	  }
+   .enlace-nav{
+        color:white;
+	text-decoration:none;
+        margin:0;
+        padding:0;
+        font:400 12px/12px sans-serif;
+	}
+
+ .text-productos{
+	text-align: left; 
+ }
 	
   </style>
 </head>
 
 <body>
+<div class="nav-inicio">
+  <h1 class="text-productos">Productos</h1> <b><a href="carritodecompra.html" class="enlace-nav"> Carrito de Compra </a></b>
+</div>
   <h1>Productos</h1> <a href="carritodecompra.html"> Carrito de Compra </a>
   <div class="contenedor"></div>
 
