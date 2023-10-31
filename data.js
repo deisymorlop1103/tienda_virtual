@@ -17,7 +17,7 @@ const data = [
     "price": 22.3,
     "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
     "category": "men's clothing",
-    "image": "https://i.pinimg.com/564x/4f/b5/c5/4fb5c5479b28766e955b0b81939f37cb.jpg",
+    "image": "https://i.pinimg.com/564x/ef/e8/3f/efe83f3285102243fe8847c138583219.jpg",
     "rating": {
       "rate": 4.1,
       "count": 259
@@ -53,7 +53,7 @@ const data = [
     "price": 695,
     "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
     "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    "image": "https://i.pinimg.com/564x/c2/95/8d/c2958d48daa178ab8191779552e15209.jpg",
     "rating": {
       "rate": 4.6,
       "count": 400
@@ -65,7 +65,7 @@ const data = [
     "price": 168,
     "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
     "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    "image": "https://i.pinimg.com/564x/22/ba/55/22ba55b89f50b9c20395577a031022cf.jpg",
     "rating": {
       "rate": 3.9,
       "count": 70
@@ -77,7 +77,7 @@ const data = [
     "price": 9.99,
     "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
     "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    "image": "https://i.pinimg.com/564x/4a/a8/77/4aa877fcd9102661a86c2430077b4a27.jpg",
     "rating": {
       "rate": 3,
       "count": 400
@@ -89,7 +89,7 @@ const data = [
     "price": 10.99,
     "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
     "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    "image": "https://i.pinimg.com/564x/54/28/a9/5428a9bc6c1adf8385ce06aff803d8ee.jpg",
     "rating": {
       "rate": 1.9,
       "count": 100
@@ -101,7 +101,7 @@ const data = [
     "price": 64,
     "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
     "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    "image": "https://i.pinimg.com/564x/96/38/78/9638783c2c3287cac54fff7788aa310f.jpg",
     "rating": {
       "rate": 3.3,
       "count": 203
@@ -113,7 +113,7 @@ const data = [
     "price": 109,
     "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
     "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    "image": "https://i.pinimg.com/564x/39/04/68/390468038a0a5fed83b6d2188d339b1e.jpg",
     "rating": {
       "rate": 2.9,
       "count": 470
