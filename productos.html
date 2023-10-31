@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+ <title>productos</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    /*En este ejemplo, hemos utilizado CSS flexbox para que los cards se muestren horizontalmente en la clase .contenedor. 
+      La propiedad flex-wrap: wrap permite que los cards se envuelvan a la siguiente línea cuando no caben en la pantalla, 
+	  y justify-content: space-between distribuye el espacio horizontalmente entre los elementos.
+      Además, hemos establecido un ancho fijo para cada card utilizando flex-basis para que ocupen aproximadamente un tercio 
+	  del ancho del contenedor, y hemos añadido un margen para separarlos. 
+	  Esto crea una disposición horizontal ordenada de los cards. Ajusta los valores según tus necesidades de diseño.
+    */
+    /* Estilo para la clase "contenedor" */
+    .contenedor {
+      display: flex; /* Muestra los elementos hijos en línea (horizontalmente) */
+      flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea cuando no caben en la pantalla */
+      justify-content: space-between; /* Distribuye el espacio horizontalmente entre los elementos */
+    }
+
+    /* Estilo para los cards */
+    .card {
+      margin: 5px; /* Agrega un margen entre los cards */
+	  border: 1px solid #c1c2ca;
+	  padding: 12px;
+	  border-radius: 20px;
+    }
+	   background{
+		  background: linear-gradient(90deg, rgba(224,223,232,1) 0%, rgba(234,234,244,1) 35%, rgba(229,243,246,1) 100%);
+	  }
+    .nav-inicio{
+         background:#0a0a77;
+	 color:white;
+	    margin-top:-25px;
+	  }
+   .enlace-nav{
+        color:white;
+	text-decoration:none;
+        margin:0;
+        padding:0;
+        font:400 12px/12px sans-serif;
+	}
+
+ .text-productos{
+	text-align: left; 
+ }
+	
+  </style>
+</head>
+
+<body>
+<div class="nav-inicio">
+  <h1 class="text-productos">Productos</h1> <b><a href="carritodecompra.html" class="enlace-nav"> Carrito de Compra </a></b>
+</div>
+  <div class="contenedor"></div>
+  
+	<script src="script.js"></script>
+</body>
+</html>
 
