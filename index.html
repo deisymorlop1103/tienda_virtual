@@ -56,14 +56,9 @@ body {font-family: "Lato", sans-serif}
 </head>
 
 <body>
-<div class="nav-inicio">
-  <h1 class="text-productos"></h1> <b><a href="carritodecompra.html" class="enlace-nav"> <h1 class="text-productos">Carrito de compra </h1></a></b>
-	<b><a href="productos.html" class="enlace-nav"> <h1 class="text-productos">Productos </h1></a></b>
-</div>
-<!--  <h1>Productos</h1> <a href="carritodecompra.html"> Carrito de Compra </a>-->
+
 	
   <div class="contenedor"></div>
-<!--
 
 	<!-- Navbar -->
 <div class="w3-top">
@@ -215,45 +210,6 @@ window.onclick = function(event) {
   }
 }
 </script>
-	
- <!-- <script>
-    // Función para obtener datos de la API ficticia
-    async function obtenerProductos() {
-      try {
-        const response = await fetch('https://fakestoreapi.mapatagbusqueda.repl.co/products');
-        if (!response.ok) {
-          throw new Error('Error en la solicitud');
-        }
-        const data = await response.json();
-        return data;
-      } catch (error) {
-        console.error('Error:', error);
-        return [];
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", async () => {
-      const contenedor = document.querySelector(".contenedor");
-      const prods = await obtenerProductos();
-
-      let productos = "";
-      prods.test.forEach((product) => {
-		localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
-        productos += `
-          <div class="card" style="width: 18rem;">
-            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-text">${product.title}</h5>
-              <p class="card-text">${product.price}</p>
-              <a href="detalleproducto.html?id=${product.id}" class="btn btn-primary">Ver Detalle</a>
-            </div>
-          </div>
-        `;
-      });
-
-      contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
-    });
-  </script>-->
 	<!-- <script src="script.js"></script>-->
 </body>
 </html>
