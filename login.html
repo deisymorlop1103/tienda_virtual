@@ -19,34 +19,37 @@
     </form>
 
     <script>
-        $(document).ready(function() {
-            var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
+        var users = JSON.parse(localStorage.getItem('users')) || [];
 
-            $("#login-form").submit(function(e) {
-                e.preventDefault();
-                var username = $("#login-username").val();
-                var password = $("#login-password").val();
-                var validUser = users.find(function(user) {
-                    return user.username === username && user.password === password;
-                });
-                if (validUser) {
-                    alert('Login successful');
-                } else {
-                    alert('Invalid username or password');
-                }
+        function checkUser(username) {
+            return users.some(function(user) {
+                return user.username === username;
             });
+        }
 
-            $("#register-form").submit(function(e) {
-                e.preventDefault();
-                var username = $("#register-username").val();
-                var password = $("#register-password").val();
-                var email = $("#register-email").val();
-                var existingUser = users.find(function(user) {
-                    return user.username === username;
-                });
-                if (existingUser) {
-                    alert('Username already exists');
+        $("#login-form").submit(function(e) {
+            e.preventDefault();
+            var username = $("#login-username").val();
+            var password = $("#login-password").val();
+            var validUser = users.find(function(user) {
+                return user.username === username && user.password === password;
+            });
+            if (validUser) {
+                alert('Login successful');
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        });
 
-        </script>
-</body> 
+        $("#register-form").submit(function(e) {
+            e.preventDefault();
+            var username = $("#register-username").val();
+            var password = $("#register-password").val();
+            var email = $("#register-email").val();
+            if (checkUser(username)) {
+                alert('Username already exists');
+            }
+                </script>
+</body>
 </html>
