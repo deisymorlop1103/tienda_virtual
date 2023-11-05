@@ -28,7 +28,7 @@
         if (!response.ok) {
           throw new Error('Error en la solicitud');
         }
-        const data = await response.json();
+        const dataLogin = await response.json();
         return dataLogin;
       } catch (error) {
         console.error('Error:', error);
@@ -41,8 +41,8 @@
       const usuario = await obtenerUsuarios();
 
       let usuarios = "";
-      usuar.test1.forEach((usuario) => {
-		localStorage.setItem(`usuario_${usuario.id}`, JSON.stringify(usuario));
+      usuario.test1.forEach((usuar) => {
+		localStorage.setItem(`usuario_${usuar.id}`, JSON.stringify(usuar));
      <!--   usuarios += `
           <div class="card" style="width: 18rem;">
             <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
