@@ -6,7 +6,7 @@ class Datos {
   login(username, password) {
     if (this.usuarios.find(usuario => usuario.username === username && usuario.password === password)) {
       localStorage.setItem("usuario", username);
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     } else {
       alert("El nombre de usuario o la contraseña son incorrectos.");
     }
