@@ -18,4 +18,4 @@ class Datos {
       password
     });
 
-    localStorage.setItem("usuarios", JSON
+     localStorage.setItem("usuarios", JSON.stringify(this.usuarios, null, 2));
