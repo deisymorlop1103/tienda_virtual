@@ -1,64 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Login and Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-  
-  <style>
-    body {
-  font-family: sans-serif;
-}
+    <h1>Login and Register</h1>
+    <form id="login-form">
+        <input type="text" id="login-username" placeholder="Username" required><br>
+        <input type="password" id="login-password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+    </form>
+    <form id="register-form">
+        <input type="text" id="register-username" placeholder="Username" required><br>
+        <input type="password" id="register-password" placeholder="Password" required><br>
+        <input type="email" id="register-email" placeholder="Email" required><br>
+        <button type="submit">Register</button>
+    </form>
 
-.container {
-  width: 400px;
-  margin: 0 auto;
-}
+    <script>
+        $(document).ready(function() {
+            var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
 
-.form-group {
-  margin-bottom: 10px;
-}
+            $("#login-form").submit(function(e) {
+                e.preventDefault();
+                var username = $("#login-username").val();
+                var password = $("#login-password").val();
+                var validUser = users.find(function(user) {
+                    return user.username === username && user.password === password;
+                });
+                if (validUser) {
+                    alert('Login successful');
+                } else {
+                    alert('Invalid username or password');
+                }
+            });
 
-.form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.btn {
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #ccc;
-}
-  </style>
-  
-  <div class="container">
-    <h1>Login</h1>
-    <div class="form-group">
-      <label for="username">Usuario</label>
-      <input type="text" class="form-control" id="username" placeholder="Nombre de usuario">
-    </div>
-    <div class="form-group">
-      <label for="password">Contraseña</label>
-      <input type="password" class="form-control" id="password" placeholder="Contraseña">
-    </div>
-    <button type="button" class="btn btn-primary" id="login-btn">Iniciar sesión</button>
-    <p class="or">o</p>
-    <button type="button" class="btn btn-primary" id="register-btn">Registrarse</button>
-  </div>
- <!-- <script src="script.js"></script>-->
-  <script src="login.js"></script>
-  <script src="datos.js"></script>
-</body>
-</html>
+            $("#register-form").submit(function(e) {
+                e.preventDefault();
+                var username = $("#register-username").val();
+                var password = $("#register-password").val();
+                var email = $("#register-email").val();
+                var existingUser = users.find(function(user) {
+                    return user.username === username;
+                });
+                if (existingUser) {
+                    alert('Username already exists');
