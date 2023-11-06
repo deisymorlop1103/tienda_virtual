@@ -23,7 +23,7 @@
 <div style="margin-top:60px; margin-left:20px;">
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
-  <!--<img id="imagen" style="width: 100px" class="card-img-top" alt="...">-->
+  <p id="precio"> </p>
 </div>
 	
   <script>
@@ -42,6 +42,10 @@
           const listItem = document.createElement("li");
           listItem.textContent = product.title;
           carritoLista.appendChild(listItem);
+
+          const precio = document.createElement("p");
+          precio.textContent = product.price;
+          carritoLista.appendChild(precio);
 
           //const listImagen = document.createElement("img");
           // `
