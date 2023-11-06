@@ -23,7 +23,7 @@
 <div style="margin-top:60px; margin-left:20px;">
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
-  <img id="imagen" style="width: 100px" class="card-img-top" alt="...">
+  <!--<img id="imagen" style="width: 100px" class="card-img-top" alt="...">-->
 </div>
 	
   <script>
@@ -44,11 +44,11 @@
           carritoLista.appendChild(listItem);
 
           //const listImagen = document.createElement("img");
-          `
-          const imagen = document.createElement("img src="${product.image}" style="width: 100px" class="card-img-top" alt="..."");
-          `;
-          listImagen.textContent = product.imagen;
-          carritoLista.appendChild(imagen);
+          // `
+          // const imagen = document.createElement("img src="${product.image}" style="width: 100px" class="card-img-top" alt="..."");
+          // `;
+          // listImagen.textContent = product.imagen;
+          // carritoLista.appendChild(imagen);
 
         });
       } else {
