@@ -1,3 +1,10 @@
 body{
   background-color: white;
     }
+
+<<<<<<< HEAD
+body{
+    background-color: linear-gradient(90deg, rgba(224,223,232,1) 0%, rgba(234,234,244,1) 35%, rgba(229,243,246,1) 100%);
+}
+=======
+>>>>>>> ec539596937dd0149e3c94f1153e093ecbf3bbc4
