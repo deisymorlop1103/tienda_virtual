@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -19,10 +19,14 @@
     <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
     </div>
   </div>
+	
+<div style="margin-top:50px;">
   <h1>Carrito de Compras</h1>
+   <div class="card" style="width: 18rem;">
   <ul id="carritoLista"></ul>
-  <div class="contenedor"></div>
-
+</div>
+</div>
+	
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Obtén el carrito desde localStorage
@@ -31,29 +35,6 @@
       // Obtén el elemento de la lista del carrito
       const carritoLista = document.getElementById("carritoLista");
 
-      const contenedor = document.querySelector(".contenedor");
-      const prods = await obtenerProductos();
-
-let productos = "";
-      prods.test.forEach((product) => {
-		localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
-        productos += `
-          <div class="card" style="width: 18rem;">
-            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-text">${product.title}</h5>
-              <p class="card-text">${product.price}</p>
-              <p class="card-text">${product.descripcion}</p>
-            </div>
-          </div>
-        `;
-      });
-
-      contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
-    });
-
-
-      
       if (carrito && carrito.length > 0) {
         // Recorre los productos en el carrito y muestra cada uno en la lista
         carrito.forEach((product) => {
@@ -66,7 +47,6 @@ let productos = "";
         carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
       }
     });
-
   </script>
 </body>
 </html>
