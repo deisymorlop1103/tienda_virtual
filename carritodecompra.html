@@ -19,8 +19,8 @@
     <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
     </div>
   </div>
-  <h1 w3-top>Carrito de Compras</h1>
-  <ul id="carritoLista" w3-top></ul>
+  <h1>Carrito de Compras</h1>
+  <ul id="carritoLista"></ul>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -35,6 +35,7 @@
         carrito.forEach((product) => {
           const listItem = document.createElement("li");
           listItem.textContent = product.title;
+          listItem.textContent = product.image;
           carritoLista.appendChild(listItem);
         });
       } else {
