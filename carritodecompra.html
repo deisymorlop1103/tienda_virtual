@@ -37,20 +37,9 @@
         // Recorre los productos en el carrito y muestra cada uno en la lista
         carrito.forEach((product) => {
 
-		 productos += `
-          <div class="card" style="width: 18rem;">
-            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-text">${product.title}</h5>
-              <p class="card-text">${product.price}</p>
-              <a href="detalleproducto.html?id=${product.id}" class="btn btn-primary">Ver Detalle</a>
-            </div>
-          </div>
-        `;
-		
-          // const listItem = document.createElement("li");
-          // listItem.textContent = product.title;
-          // carritoLista.appendChild(listItem);
+          const listItem = document.createElement("li");
+          listItem.textContent = product.title;
+          carritoLista.appendChild(listItem);
         });
       } else {
         // Si el carrito está vacío, muestra un mensaje
