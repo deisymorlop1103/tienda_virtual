@@ -10,13 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <style>
-    /*En este ejemplo, hemos utilizado CSS flexbox para que los cards se muestren horizontalmente en la clase .contenedor. 
-      La propiedad flex-wrap: wrap permite que los cards se envuelvan a la siguiente línea cuando no caben en la pantalla, 
-	  y justify-content: space-between distribuye el espacio horizontalmente entre los elementos.
-      Además, hemos establecido un ancho fijo para cada card utilizando flex-basis para que ocupen aproximadamente un tercio 
-	  del ancho del contenedor, y hemos añadido un margen para separarlos. 
-	  Esto crea una disposición horizontal ordenada de los cards. Ajusta los valores según tus necesidades de diseño.
-    */
+
     /* Estilo para la clase "contenedor" */
     .contenedor {
       display: flex; /* Muestra los elementos hijos en línea (horizontalmente) */
@@ -64,19 +58,13 @@
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
-    <a href="mundofroa.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WORLD FROA</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <a href="carritodecompra.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" ><img class="logo" src="icons8-cart-50.png" style="width: 30px;"></a>
     </div>
     <a href="carrito.png" class="w3-padding-large w3-hover-red w3-hide-small w3-right"></a>
   </div>
 </div>
-
-	
   <div class="contenedor"></div>
-
-	  <script>
+<script>
     // Función para obtener datos de la API ficticia
     async function obtenerProductos() {
       try {
