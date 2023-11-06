@@ -3,7 +3,7 @@
     // Función para obtener datos de la API ficticia
     async function obtenerProductos() {
       try {
-        const response = await fetch('https://fakestoreapi.mapatagbusqueda.repl.co/products');
+        const response = await fetch('https://fakestoreapi.deisymoreno1.repl.co/products');
         if (!response.ok) {
           throw new Error('Error en la solicitud');
         }
@@ -36,5 +36,6 @@
 
       contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
     });
+
   </script>
   
