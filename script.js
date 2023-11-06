@@ -37,5 +37,49 @@
       contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
     });
 
+// obtener usuarios desde la API ficticia
+ async function obtenerUsuarios() {
+      try {
+        const response = await fetch('https://fakestoreapi.deisymoreno1.repl.co/dataLogin');
+        if (!response.ok) {
+          throw new Error('Error en la solicitud');
+        }
+        const usuarios = await response.json();
+        return usuarios;
+      } catch (error) {
+        console.error('Error:', error);
+        return [];
+      }
+    }
+
+ document.addEventListener("DOMContentLoaded", async () => {
+     // const contenedor = document.querySelector(".contenedor");
+      const usuar = await obtenerUsuarios();
+
+      let usuarios = "";
+      usuar.test1.forEach((usuario) => {
+	localStorage.setItem(`usuario_${product.id}`, JSON.stringify(usuario));
+      });
+    });
+
+// validar si existe el usuario
+function existeUsuario(user, password, usuarios) {
+  if (!user || !password) {
+    alert("Usuario no existe, debe registrarse");
+     return false;  
+  }
+	//const usuario = document.querySelector("input[name='user']").value;
+      //  const clave = document.querySelector("input[name='password']").value;
+	
+  // función filter para encontrar los usuarios con el mismo usuario y clave
+  const usuarioExiste = usuarios.filter((usuarioJson) => {
+    return usuarioJson.user === usuario && usuarioJson.password === clave;
+	   window.location.href = "index.html";
+  });
+
+  // en caso de que no existan devuelve 0
+  return usuarioExiste.length === 0;
+}
+
   </script>
   
