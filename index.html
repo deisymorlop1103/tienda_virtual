@@ -45,7 +45,7 @@
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 	margin-top: -30px;
-
+	  
 .img>logo{
   	width:50px;
   	height: 60px;
@@ -56,7 +56,8 @@ body {font-family: "Lato", sans-serif}
 </head>
 <body>
   <div class="contenedor"></div>
-	<!-- Navbar -->
+	
+<!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -68,14 +69,13 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 </div>
-
-
+	
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px; height: 580px;">
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center" style="height: 100%;">
-	   <img src="banner1.0.svg" style="width:100%; object-fit: contain; height: 100%;"> 
+    <img src="banner1.0.svg" style="width:100%; object-fit: contain; height: 100%;"> 
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Medellín City</h3>
       <p><b>Textil Revolution!</b></p>   
@@ -96,7 +96,7 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <!-- The Band Section -->
+  <!-- ******************** -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
     <h2 class="w3-wide">FROA</h2>
     <p class="w3-opacity"><i>We love fashion</i></p>
@@ -118,7 +118,8 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
   </div>
-  <!-- Ticket Modal -->
+	
+  <!--  Modal -->
   <div id="ticketModal" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
       <header class="w3-container w3-teal w3-center w3-padding-32"> 
@@ -137,18 +138,18 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
   </div>
-  <!-- The Contact Section -->
+	
+  <!-- Contacto -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
    <!-- <div class="w3-row w3-padding-32">-->
       <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker w3-center" style="width:30px"></i> Medellín, CO<br>
-        <i class="fa fa-phone w3-center" style="width:30px"></i> Phone: +57 3245710008<br>
-        <i class="fa fa-envelope w3-center" style="width:30px"> </i> Email: froalingerie@gmail.com<br>
+        <i class="fa fa-map-marker w3-wide w3-center" style="width:30px"></i> Medellín, CO<br>
+        <i class="fa fa-phone w3-wide w3-center" style="width:30px"></i> Phone: +57 3245710008<br>
+        <i class="fa fa-envelope w3-wide w3-center" style="width:30px"> </i> Email: froalingerie@gmail.com<br>
     <!--  </div>-->
     </div>
   </div>
-<!-- End Page Content -->
 </div>
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
@@ -160,39 +161,39 @@ body {font-family: "Lato", sans-serif}
   <i class="fa fa-linkedin w3-hover-opacity"></i>
   <p class="w3-medium">FROA LINGERIE.</p>
 </footer>
-	<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
+	
+<script>
+	var myIndex = 0;
+	carousel();
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";  
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}    
+	  x[myIndex-1].style.display = "block";  
+	  setTimeout(carousel, 4000);    
+	}
+	
 // Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+	function myFunction() {
+	  var x = document.getElementById("navDemo");
+	  if (x.className.indexOf("w3-show") == -1) {
+	    x.className += " w3-show";
+	  } else { 
+	    x.className = x.className.replace(" w3-show", "");
+	  }
+	}
+	
+	// When the user clicks anywhere outside of the modal, close it
+	var modal = document.getElementById('ticketModal');
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+	    modal.style.display = "none";
+	  }
+	}
 </script>
 	<!-- <script src="script.js"></script>-->
 </body>
