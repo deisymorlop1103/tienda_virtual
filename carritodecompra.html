@@ -20,8 +20,8 @@
     </div>
   </div>
 	
-<div style="margin-top:50px;">
-  <h1>Carrito de Compras</h1>
+<div style="margin-top:60px; margin-left:20px;">
+  <h2>Carrito de Compras</h2>
    <div class="card" style="width: 18rem;">
   <ul id="carritoLista"></ul>
 </div>
@@ -38,8 +38,10 @@
       if (carrito && carrito.length > 0) {
         // Recorre los productos en el carrito y muestra cada uno en la lista
         carrito.forEach((product) => {
+	  const listItem = document.createElement("div");
           const listItem = document.createElement("li");
           listItem.textContent = product.title;
+	  listItem.textContent = product.price;
           carritoLista.appendChild(listItem);
         });
       } else {
