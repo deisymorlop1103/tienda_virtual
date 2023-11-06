@@ -24,6 +24,7 @@
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
   <p id="precio"> </p>
+  <img id="imagen">
 </div>
 	
   <script>
@@ -33,7 +34,7 @@
 
       // Obtén el elemento de la lista del carrito
       const carritoLista = document.getElementById("carritoLista");
-      const imagen = document.getElementById("imagen");
+      const imagen = document.getElementById("image");
 
       if (carrito && carrito.length > 0) {
         // Recorre los productos en el carrito y muestra cada uno en la lista
@@ -42,6 +43,10 @@
           const listItem = document.createElement("li");
           listItem.textContent = product.title;
           carritoLista.appendChild(listItem);
+
+          const imagen = document.createElement("img");
+          imagen.textContent = product.image;
+          imagen.appendChild(image);
 
           const precio = document.createElement("p");
           precio.textContent = product.price;
