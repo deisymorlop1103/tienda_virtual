@@ -1,5 +1,5 @@
 
- <script>
+
     // Función para obtener datos de la API ficticia
     async function obtenerProductos() {
       try {
@@ -81,5 +81,5 @@ function existeUsuario(user, password, usuarios) {
   return usuarioExiste.length === 0;
 }
 
-  </script>
+  
   
