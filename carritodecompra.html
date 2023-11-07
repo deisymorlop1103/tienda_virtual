@@ -24,41 +24,11 @@
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
   <p id="precio"> </p>
-  <div class="detalles-producto" style="margin-left: 30px;">
-    <!-- Aquí mostrarás los detalles del producto utilizando JavaScript -->
-  </div>
+  
 </div>
 	
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      
-          // Obtén el ID del producto de la URL (podemos usar la url porque no estamos haciendo http en internet sino en el equipo)
-    const urlParams = new URL(window.location.href);
-    const productId = urlParams.searchParams.get('id');
-
-       // Función para obtener los detalles del product
-    // Intenta recuperar el producto desde localStorage
-    const productJSON = localStorage.getItem(`product_${productId}`);
-
- const product = JSON.parse(productJSON);
-
-// mostramos el detalle del producto:
-if (productJSON) {
-      // Si el producto está en localStorage, convierte el JSON a un objeto JavaScript
-      const product = JSON.parse(productJSON);
-
-      // Muestra los detalles del producto en la página
-      const detallesContainer = document.querySelector('.detalles-producto');
-      detallesContainer.innerHTML = `
-        <h2>${product.title}</h2>
-        <img src="${product.image}" alt="${product.title}" style="width: 232px">
-        <p><strong>Precio:</strong> $${product.price}</p>
-        <p><strong>Descripción:</strong> ${product.description}</p>
-      `;
-
-
-      
-
       // Obtén el carrito desde localStorage
       const carrito = JSON.parse(localStorage.getItem("carrito"));
 
