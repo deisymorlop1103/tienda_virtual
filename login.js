@@ -18,7 +18,7 @@ function iniciarSesion() {
       localStorage.setItem("usuario", usuario);
 
       // Redirigimos a la página principal
-      window.location.href = "principal.html";
+      window.location.href = "index.html";
       return;
     }
   }
