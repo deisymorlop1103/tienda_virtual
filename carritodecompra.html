@@ -23,9 +23,12 @@
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
   <p id="precio"> </p>
+
+	//NEW *******************
+   <button onclick="myFunction()" id="eliminarProducto" style="margin-left:30px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Eliminar Producto</button>
   
 </div>
-	
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Obtén el carrito desde localStorage
@@ -64,6 +67,20 @@
         carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
       }
     });
+
+
+
+
+function myFunction() {
+  const element = document.getElement("li");
+  element.remove();
+}
+
+
+
+
+
+	  
   </script>
 </body>
 </html>
