@@ -23,10 +23,10 @@
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
   <p id="precio"> </p>
-  
-
 </div>
 
+<button id="delItems" style="margin-left:30px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Vaciar Carrito</button>
+  
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Obtén el carrito desde localStorage
@@ -68,15 +68,20 @@
       }
     });
 
+//Evento para el botón que elimina todos los items del carrito
+const deleteItemsButton = document.getElemntById("delItems");
+	  deleteItemsButton.addEventListener("click",() =>{
+		  deleteItems();
+	  });
 
-  </script>
-
-
-
-	   
-  
-  
-
+	  //función que elimina todos los elemntos del carrito al accionar el botón
+	  function deleteItems(){
+		  localStorage.removeItem("carrito");
+		  const carritoLista = document.getElemntById("carritoLista");
+		  carritoLista.innerHTML= "<P> !EL CARRITO ESTÁ VACÍO !" </P>;
+	  	}
+	  });
+		  
 
 
 
