@@ -66,10 +66,10 @@
         // Si el carrito está vacío, muestra un mensaje
         carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
       }
-    
+    });
 
 //Evento para el botón que elimina todos los items del carrito
-const deleteItemsButton = document.getElemntById("delItems");
+const deleteItemsButton = document.getElementById("delItems");
 	  deleteItemsButton.addEventListener("click",() =>{
 		  deleteItems();
 	  });
@@ -77,16 +77,12 @@ const deleteItemsButton = document.getElemntById("delItems");
 	  //función que elimina todos los elemntos del carrito al accionar el botón
 	  function deleteItems(){
 		  localStorage.removeItem("carrito");
-		  const carritoLista = document.getElemntById("carritoLista");
-		  carritoLista.innerHTML= "<P> !EL CARRITO ESTÁ VACÍO ! </P>";
+		  const carritoLista = document.getElementById("carritoLista");
+		  carritoLista.innerHTML = "<P> !EL CARRITO ESTÁ VACÍO ! </P>";
 	  	}
 	  })
 		  
-});
-
-
-
-	  
+ 
   </script>
 </body>
 </html>
