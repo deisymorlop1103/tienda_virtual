@@ -23,8 +23,9 @@
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
   <p id="precio"> </p>
+<button onclick="myFunction()" id="eliminarProducto" style="margin-left:30px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Eliminar Producto</button>
 
-	/<!--NEW ******************* -->
+	
   
 </div>
 
@@ -42,10 +43,7 @@
         carrito.forEach((product) => {
 
           const listItem = document.createElement("li");
-		//NEW***********
-          const botonItem = document.create("button onclick="myFunction()"")
-
-		// <button onclick="myFunction()" id="eliminarProducto" style="margin-left:30px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Eliminar Producto</button>
+		
   
           listItem.textContent = product.title;
           carritoLista.appendChild(listItem);
@@ -57,6 +55,10 @@
           const precio = document.createElement("p");
           precio.textContent = product.price;
           carritoLista.appendChild(precio);
+
+//NEW **********
+	const eliminarProducto = document.createElement("button");
+		
 
           //const listImagen = document.createElement("img");
           // `
