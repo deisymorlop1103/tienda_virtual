@@ -82,10 +82,10 @@
       // Muestra los detalles del producto en la página
       const detallesContainer = document.querySelector('.detalles-producto');
       detallesContainer.innerHTML = `
-        <h5 style=" margin-left:10px;">${product.title}</h5>
+        <h5 style=" margin-left:60px;">${product.title}</h5>
         <img src="${product.image}" alt="${product.title}" style="width: 200px">
-        <p><strong>Precio:</strong> $${product.price}</p>
-        <p><strong>Descripción:</strong> ${product.description}</p>
+        <p style=" margin-left:10px;"><strong>Precio:</strong> $${product.price}</p>
+        <p style=" margin-left:10px;"><strong>Descripción:</strong> ${product.description}</p>
       `;
     } else {
       // Si el producto no está en localStorage, muestra un mensaje de que no se ha encontrado.
