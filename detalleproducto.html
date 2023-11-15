@@ -32,13 +32,13 @@
   </div>
   
   <header>
-    <h3 style="margin-left: 30px; margin-top:80px">Detalles del Producto</h3>
+    <h4 style="margin-left: 30px; margin-top:80px">Detalles del Producto</h4>
   </header>
   <div class="detalles-producto" style="margin-left: 550px;">
     <!-- Aquí mostrarás los detalles del producto utilizando JavaScript -->
   
   </div>
-  <button id="agregarAlCarrito" style="margin-left:30px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Agregar al Carrito</button>
+  <button id="agregarAlCarrito" style="margin-left:550px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Agregar al Carrito</button>
 
  
   <script>
@@ -82,10 +82,10 @@
       // Muestra los detalles del producto en la página
       const detallesContainer = document.querySelector('.detalles-producto');
       detallesContainer.innerHTML = `
-        <h4>${product.title}</h4>
-        <img src="${product.image}" alt="${product.title}" style="width: 232px">
+        <h5>${product.title}</h5>
+        <img src="${product.image}" alt="${product.title}" style="width: 200px">
         <p><strong>Precio:</strong> $${product.price}</p>
-        <p style:"margin-left:20px"><strong>Descripción:</strong> ${product.description}</p>
+        <p><strong>Descripción:</strong> ${product.description}</p>
       `;
     } else {
       // Si el producto no está en localStorage, muestra un mensaje de que no se ha encontrado.
