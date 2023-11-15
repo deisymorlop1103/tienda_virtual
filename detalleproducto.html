@@ -34,7 +34,7 @@
   <header>
     <h3 style="margin-left: 30px; margin-top:80px">Detalles del Producto</h3>
   </header>
-  <div class="detalles-producto" style="margin-left: 30px;">
+  <div class="detalles-producto" style="margin-left: 550px;">
     <!-- Aquí mostrarás los detalles del producto utilizando JavaScript -->
   
   </div>
@@ -82,10 +82,10 @@
       // Muestra los detalles del producto en la página
       const detallesContainer = document.querySelector('.detalles-producto');
       detallesContainer.innerHTML = `
-        <h3>${product.title}</h3>
+        <h4>${product.title}</h4>
         <img src="${product.image}" alt="${product.title}" style="width: 232px">
         <p><strong>Precio:</strong> $${product.price}</p>
-        <p><strong>Descripción:</strong> ${product.description}</p>
+        <p style:"margin-left:20px"><strong>Descripción:</strong> ${product.description}</p>
       `;
     } else {
       // Si el producto no está en localStorage, muestra un mensaje de que no se ha encontrado.
