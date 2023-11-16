@@ -44,6 +44,7 @@
         // Recorre los productos en el carrito y muestra cada uno en la lista
         carrito.forEach((product) => {
 
+          const src = document.getElementById("image");
           const img = document.createElement("img");
           const listItem = document.createElement("div");
           const precio = document.createElement("p");
@@ -78,8 +79,6 @@
       const carritoLista = document.getElementById("carritoLista");
       carritoLista.innerHTML = "<P> !EL CARRITO ESTÁ VACÍO ! </P>";
     }
-
-
 
   </script>
 </body>
