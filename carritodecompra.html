@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
- <title>productos</title>
+ <title>carrito</title>
   <link href="style.css" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -42,10 +42,10 @@
         carrito.forEach((product) => {
 
           const listItem = document.createElement("div");
+	  const precio = document.createElement("p");
           listItem.textContent = product.title;
           carritoLista.appendChild(listItem);
 
-          const precio = document.createElement("p");
           precio.textContent = product.price;
           carritoLista.appendChild(precio);
 
