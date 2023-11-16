@@ -13,9 +13,11 @@
 <body>
 
 <style>
-  #img {
-  width: 150px;
-
+ 
+#img {
+    margin-left: 300px;
+    width: 80px;
+    margin-top: -55px;
 }
 </style>
 
@@ -63,6 +65,8 @@
           //obtengo la ruta de la imagen
           img.src = product.image;
 
+          // Modificas los atributos
+          elem.classList.add('img');
           //carritoLista.appendChild(listItem).appendChild(precio).appendChild(img);
 
           carritoLista.appendChild(listItem)
