@@ -19,9 +19,7 @@
     width: 80px;
     margin-top: -55px;
 }
-.element.style {
-    margin-left: 600px;
-}
+
 </style>
 
   <!-- Navbar -->
@@ -36,7 +34,7 @@
 
   <div style="margin-top:60px; margin-left:20px;">
     <h2>Carrito de Compras</h2>
-    <ul id="carritoLista"></ul>
+    <ul id="carritoLista" style="margin-left: 600px";></ul>
     <p id="precio"> </p>
   </div>
 
@@ -63,17 +61,18 @@
           const precio = document.createElement("div");
           const order = document.createElement("div");
 
+          //obtengo el contenido desde la data por el nombre de los atributos (price, tittle, image)
           precio.textContent = product.price;
           listItem.textContent = product.title;
           //obtengo la ruta de la imagen
           img.src = product.image;
 
-          // Modificas los atributos
+          // Modificas los atributos para ponerle un id 
           img.classList.add('img');
           var carritoLista = document.getElementById('carritoLista');
           carritoLista.appendChild(img);
-          //carritoLista.appendChild(listItem).appendChild(precio).appendChild(img);
 
+          //muestro el 
           carritoLista.appendChild(listItem)
           carritoLista.appendChild(precio)
           carritoLista.appendChild(order).appendChild(img);
