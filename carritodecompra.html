@@ -24,6 +24,7 @@
   <ul id="carritoLista"></ul>
   <p id="precio"> </p>
 </div>
+	  <div class="contenedor"></div>
 
 <button id="delItems" style="margin-left:30px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Vaciar Carrito</button>
   
@@ -51,27 +52,27 @@
 
 
 
- // document.addEventListener("DOMContentLoaded", async () => {
- //      const contenedor = document.querySelector(".contenedor");
- //      const prods = await obtenerProductos();
+ document.addEventListener("DOMContentLoaded", async () => {
+      const contenedor = document.querySelector(".contenedor");
+      const prods = await obtenerProductos();
 
- //      let productos = "";
- //      prods.test.forEach((product) => {
-	// 	localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
- //        productos += `
- //          <div class="card" style="width: 18rem;">
- //            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
- //            <div class="card-body">
- //              <h5 class="card-text">${product.title}</h5>
- //              <p class="card-text">${product.price}</p>
- //              <a href="detalleproducto.html?id=${product.id}" class="btn btn-primary">Ver Detalle</a>
- //            </div>
- //          </div>
- //        `;
- //      });
+      let productos = "";
+      prods.test.forEach((product) => {
+		localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
+        productos += `
+          <div class="card" style="width: 18rem;">
+            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-text">${product.title}</h5>
+              <p class="card-text">${product.price}</p>
+              <a href="detalleproducto.html?id=${product.id}" class="btn btn-primary">Eliminar producto</a>
+            </div>
+          </div>
+        `;
+      });
 
- //      contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
- //    });
+      contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
+    });
 
 
 
