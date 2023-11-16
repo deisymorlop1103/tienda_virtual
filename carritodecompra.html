@@ -34,24 +34,48 @@
 
       // Obtén el elemento de la lista del carrito
       const carritoLista = document.getElementById("carritoLista");
-      const imagen = document.getElementById("image");
+     // const imagen = document.getElementById("image");
 
       if (carrito && carrito.length > 0) {
         // Recorre los productos en el carrito y muestra cada uno en la lista
         carrito.forEach((product) => {
 
-          const listItem = document.createElement("li");
-  
+          const listItem = document.createElement("div");
           listItem.textContent = product.title;
           carritoLista.appendChild(listItem);
-
-          //const imagen = document.createElement("img");
-          //imagen.textContent = product.image;
-          //imagen.appendChild(image);
 
           const precio = document.createElement("p");
           precio.textContent = product.price;
           carritoLista.appendChild(precio);
+
+
+
+
+ // document.addEventListener("DOMContentLoaded", async () => {
+ //      const contenedor = document.querySelector(".contenedor");
+ //      const prods = await obtenerProductos();
+
+ //      let productos = "";
+ //      prods.test.forEach((product) => {
+	// 	localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
+ //        productos += `
+ //          <div class="card" style="width: 18rem;">
+ //            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
+ //            <div class="card-body">
+ //              <h5 class="card-text">${product.title}</h5>
+ //              <p class="card-text">${product.price}</p>
+ //              <a href="detalleproducto.html?id=${product.id}" class="btn btn-primary">Ver Detalle</a>
+ //            </div>
+ //          </div>
+ //        `;
+ //      });
+
+ //      contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
+ //    });
+
+
+
+		
         });
 	      
       } else {
