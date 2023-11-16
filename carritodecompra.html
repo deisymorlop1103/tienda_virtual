@@ -100,27 +100,7 @@
 
 
          
-          document.addEventListener("DOMContentLoaded", async () => {
-            const contenedor = document.querySelector(".contenedor");
-            const prods = await obtenerProductos();
-
-            let productos = "";
-            prods.test.forEach((product) => {
-              localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
-              productos += `
-          <div class="card" style="width: 18rem;">
-            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-text">${product.title}</h5>
-              <p class="card-text">${product.price}</p>
-              <a href="detalleproducto.html?id=${product.id}" class="btn btn-primary">Eliminar producto</a>
-            </div>
-          </div>
-        `;
-            });
-
-            contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
-          });
+        
 
 
 
