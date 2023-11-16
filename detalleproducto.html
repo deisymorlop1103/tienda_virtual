@@ -2,45 +2,53 @@
 <html>
 
 <head>
+  <link rel="icon" href="Froa_COLOR.png" style="width: 60px;">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Detalles del Producto</title>
-  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
   <style>
-    .img>logo{
-  	width:50px;
-  	height: 60px;
-	border-radius:60%;
-	background:white;
-	  }
-
-</style>
+    .img>logo {
+      width: 50px;
+      height: 60px;
+      border-radius: 60%;
+      background: white;
+    }
+  </style>
   <!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
-     <a href="carritodecompra.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" ><img class="logo" src="icons8-cart-50.png" style="width: 30px;"></a>
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <img src="Froa-BLANCO.png" w3-padding-large w3-hide-small w3-left
+        style="width: 60px; margin-left: 660px; margin-top: 10px;">
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
+      <a href="carritodecompra.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><img
+          class="logo" src="icons8-cart-50.png" style="width: 30px;"></a>
     </div>
   </div>
-  
+
   <header>
     <h4 style="margin-left: 30px; margin-top:80px">Detalles del Producto</h4>
   </header>
-  <div class="detalles-producto" style="margin-left: 550px; margin-top:1px; box-shadow: -5px 5px 5px  lightblue; border-radius:10px; width:600px; border:solid 0.2px #E8E4E4;">
+  <div class="detalles-producto"
+    style="margin-left: 550px; margin-top:1px; box-shadow: -5px 5px 5px  lightblue; border-radius:10px; width:600px; border:solid 0.2px #E8E4E4;">
     <!-- Aquí mostrarás los detalles del producto utilizando JavaScript -->
-  
-  </div>
-  <button id="agregarAlCarrito" style="margin-left:550px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Agregar al Carrito</button>
 
- 
+  </div>
+  <button id="agregarAlCarrito"
+    style="margin-left:550px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Agregar
+    al Carrito</button>
+
+
   <script>
     // Obtén el ID del producto de la URL (podemos usar la url porque no estamos haciendo http en internet sino en el equipo)
     const urlParams = new URL(window.location.href);
@@ -50,7 +58,7 @@
     const productJSON = localStorage.getItem(`product_${productId}`);
 
     // Creamos el evento de escucha del click del botón agregar al carrito
-     document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
       const product = JSON.parse(productJSON);
       // Agrega un evento al botón "Agregar al Carrito"
       const agregarAlCarritoButton = document.getElementById("agregarAlCarrito");

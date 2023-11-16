@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <link rel="icon" href="Froa_COLOR.png" style="width: 60px;">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
- <title>productos</title>
-  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <title>productos</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-
     /* Estilo para la clase "contenedor" */
     .contenedor {
-      display: flex; /* Muestra los elementos hijos en línea (horizontalmente) */
-      flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea cuando no caben en la pantalla */
-      justify-content: space-between; /* Distribuye el espacio horizontalmente entre los elementos */
+      display: flex;
+      /* Muestra los elementos hijos en línea (horizontalmente) */
+      flex-wrap: wrap;
+      /* Permite que los elementos se envuelvan a la siguiente línea cuando no caben en la pantalla */
+      justify-content: space-between;
+      /* Distribuye el espacio horizontalmente entre los elementos */
       margin-left: 20px;
       margin-right: 20px;
       margin-top: 100px;
@@ -22,47 +26,54 @@
 
     /* Estilo para los cards */
     .card {
-    margin: 5px; /* Agrega un margen entre los cards */
-	  border: 1px solid #c1c2ca;
-	  padding: 12px;
-	  border-radius: 20px;
+      margin: 5px;
+      /* Agrega un margen entre los cards */
+      border: 1px solid #c1c2ca;
+      padding: 12px;
+      border-radius: 20px;
     }
-	   background{
-		  background: linear-gradient(90deg, rgba(224,223,232,1) 0%, rgba(234,234,244,1) 35%, rgba(229,243,246,1) 100%);
-	  }
-    .nav-inicio{
-         background:#0a0a77;
-	 color:white;
-	    margin-top:-25px;
-	  }
-   .enlace-nav{
-        color:white;
-	text-decoration:none;
-        margin:0;
-        padding:0;
-        font:400 12px/12px sans-serif;
-	}
 
- .text-productos{
-	text-align: left; 
- }
+    background {
+      background: linear-gradient(90deg, rgba(224, 223, 232, 1) 0%, rgba(234, 234, 244, 1) 35%, rgba(229, 243, 246, 1) 100%);
+    }
 
+    .nav-inicio {
+      background: #0a0a77;
+      color: white;
+      margin-top: -25px;
+    }
+
+    .enlace-nav {
+      color: white;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      font: 400 12px/12px sans-serif;
+    }
+
+    .text-productos {
+      text-align: left;
+    }
   </style>
 </head>
 
 <body>
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
-    <a href="carritodecompra.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><img class="logo" src="icons8-cart-50.png" style="width: 30px;"></a>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <img src="Froa-BLANCO.png" w3-padding-large w3-hide-small w3-left
+        style="width: 60px; margin-left: 660px; margin-top: 10px;">
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
+      <a href="carritodecompra.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><img
+          class="logo" src="icons8-cart-50.png" style="width: 30px;"></a>
     </div>
   </div>
-</div>
+  </div>
   <div class="contenedor"></div>
-<script>
+  <script>
     // Función para obtener datos de la API ficticia
     async function obtenerProductos() {
       try {
@@ -84,7 +95,7 @@
 
       let productos = "";
       prods.test.forEach((product) => {
-		localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
+        localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
         productos += `
           <div class="card" style="width: 18rem;">
             <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
@@ -100,19 +111,19 @@
       contenedor.innerHTML = productos; // Agrega el contenido al elemento con la clase "contenedor"
     });
 
-		  
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-  </script>
-	
-	<!--<script src="script.js"></script>-->
-</body>
-</html>
 
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+  <!--<script src="script.js"></script>-->
+</body>
+
+</html>
