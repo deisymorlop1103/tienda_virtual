@@ -48,6 +48,7 @@
           const img = document.createElement("img");
           const listItem = document.createElement("div");
           const precio = document.createElement("div");
+          const order = listItem+precio+img;
 
           precio.textContent = product.price;
           listItem.textContent = product.title;
@@ -55,9 +56,12 @@
           img.src = product.image;
 
           //carritoLista.appendChild(listItem).appendChild(precio).appendChild(img);
-          carritoLista.appendChild(listItem)
-          carritoLista.appendChild(precio)
-          carritoLista.appendChild(img);
+
+          // carritoLista.appendChild(listItem)
+          // carritoLista.appendChild(precio)
+          // carritoLista.appendChild(img);
+
+          carritoLista.appendChild(order);
           
          });
 
