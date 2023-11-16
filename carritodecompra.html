@@ -47,18 +47,15 @@
           const src = document.getElementById("image");
           const img = document.createElement("img");
           const listItem = document.createElement("div");
-          const precio = document.createElement("p");
+          const precio = document.createElement("div");
+
           precio.textContent = product.price;
           listItem.textContent = product.title;
-          //img.textContent = product.image;
+          //obtengo la ruta de la imagen
           img.src = product.image;
 
           carritoLista.appendChild(listItem).appendChild(precio).appendChild(img);
-          //carritoLista.appendChild(img);
-         // src.appendChild(image);
-         // precio.textContent = product.price;
-         // carritoLista.appendChild(precio);
-        
+          
          });
 
       } else {
