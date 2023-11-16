@@ -52,6 +52,22 @@
 
 
 
+
+
+		// Función para obtener datos de la API ficticia
+    async function obtenerProductos() {
+      try {
+        const response = await fetch('https://fakestoreapi.deisymoreno1.repl.co/products');
+        if (!response.ok) {
+          throw new Error('Error en la solicitud');
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error:', error);
+        return [];
+      }
+    }
  document.addEventListener("DOMContentLoaded", async () => {
       const contenedor = document.querySelector(".contenedor");
       const prods = await obtenerProductos();
@@ -76,6 +92,10 @@
 
 
 
+
+
+		
+
 		
         });
 	      
@@ -91,7 +111,7 @@ const deleteItemsButton = document.getElementById("delItems");
   deleteItems();
 });
 
-//función que elimina todos los elemntos del carrito al accionar el botón
+//función que elimina todos los elementos del carrito al accionar el botón
 function deleteItems(){
  localStorage.removeItem("carrito");
   const carritoLista = document.getElementById("carritoLista");
