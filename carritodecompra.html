@@ -54,9 +54,9 @@
 
           // precio.textContent = product.price;
           // carritoLista.appendChild(precio);
-
-        localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
-              productos += `
+          let productos = "";
+          localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
+          productos += `
           <div class="card" style="width: 18rem;">
             <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
             <div class="card-body">
@@ -66,14 +66,9 @@
             </div>
           </div>
         `;
-            });
+        });
 
-            contenedor.innerHTML = productos;
-
-
-
-
-         
+        contenedor.innerHTML = productos;
 
 
 
@@ -82,7 +77,12 @@
 
 
 
-      //  });
+
+
+
+
+
+        //  });
 
       } else {
         // Si el carrito está vacío, muestra un mensaje
