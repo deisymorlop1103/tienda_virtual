@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link rel="icon" href="Froa_COLOR.png" style="width: 60px;">
   <meta charset="utf-8">
@@ -10,17 +9,13 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <body>
-
 <style>
- 
 .img {
     margin-left: 300px;
     width: 80px;
     margin-top: -55px;
 }
-
 </style>
 
   <!-- Navbar -->
@@ -34,7 +29,6 @@
       <a href="productos.html" class="w3-bar-item w3-button w3-padding-large">PRODUCTOS</a>
     </div>
   </div>
-
   <div style="margin-top:60px; margin-left:20px;">
     <h2>Carrito de Compras</h2>
     <ul id="carritoLista" style="margin-left: 600px";></ul>
@@ -44,7 +38,7 @@
   <button id="delItems"
     style="margin-left:30px; margin-top: 20px; margin-bottom: 40px; width:150px; height:40px; border-radius: 15px;">Vaciar
     Carrito</button>
-
+  
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Obtén el carrito desde localStorage
@@ -74,12 +68,11 @@
           img.classList.add('img');
           var carritoLista = document.getElementById('carritoLista');
           carritoLista.appendChild(img);
-
+          
           //muestro el 
           carritoLista.appendChild(listItem)
           carritoLista.appendChild(precio)
           carritoLista.appendChild(order).appendChild(img);
-          
          });
 
       } else {
@@ -103,5 +96,4 @@
 
   </script>
 </body>
-
 </html>
