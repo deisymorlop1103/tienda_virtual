@@ -10,3 +10,26 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
+//+++++++++++++++++++++++++++++++++++++++
+function signInWithGoogle() {
+  // Obtenemos el proveedor de autenticación de Google.
+  const provider = firebase.auth.getProvider('google');
+
+  // Solicitamos la autorización del usuario.
+  provider.signInWithPopup().then((result) => {
+    // Si la autorización se realizó correctamente, obtenemos el token de ID del usuario.
+    const token = result.credential.idToken;
+
+    // Usamos el token de ID para iniciar la sesión del usuario.
+    const user = firebase.auth().signInWithCustomToken(token);
+
+    // Si la sesión se inició correctamente, mostramos un mensaje de éxito.
+    if (user) {
+      alert('Iniciaste sesión con éxito');
+    }
+  }).catch((error) => {
+    // Si ocurrió un error, mostramos un mensaje de error.
+    alert(error);
+  });
+}
