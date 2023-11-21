@@ -11,7 +11,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-//+++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++
 function signInWithGoogle() {
   // Obtenemos el proveedor de autenticación de Google.
   const provider = firebase.auth.getProvider('google');
