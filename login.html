@@ -93,8 +93,10 @@
     }
   </style>
 
-  <div class="container">
-    <h1>Login</h1>
+  <div class="grid-container">
+    <div>
+      <img src="banner1.0.svg" style="width:100%; object-fit: contain; height: 100%;"> 
+      </div>
 
     <!-- <div class="registro">
       <h2>Registro</h2>
@@ -136,24 +138,6 @@
   </div>
  
   <script>
-
-// Inicio de sesión
-document.querySelector(".login form").addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const correo = document.querySelector(".login input[name='correo']").value;
-  const contrasena = document.querySelector(".login input[name='contrasena']").value;
-
-  const inicioSesionExitosa = usuarios.credencialesCorrectas(correo, contrasena);
-
-  if (inicioSesionExitosa) {
-    // Redirigir a la página home
-    window.location.href = "/";
-  }
-});
-
-
-
 
     // obtiene el modal
     var modal = document.getElementById("myModal");
