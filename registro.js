@@ -20,6 +20,6 @@ document.querySelector(".login form").addEventListener("submit", (e) => {
 
   if (inicioSesionExitosa) {
     // Redirigir a la página principal
-    window.location.href = "/";
+    window.location.href = "index.html";
   }
 });
