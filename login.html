@@ -91,12 +91,18 @@
       text-decoration: none;
       cursor: pointer;
     }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 60% 40%;
+    }
   </style>
 
   <div class="grid-container">
     <div>
-      <img src="banner1.0.svg" style="width:100%; object-fit: contain; height: 100%;"> 
-      </div>
+      <img src="https://i.pinimg.com/564x/2a/58/a6/2a58a6e67a9d3144c72a7f515c1c460c.jpg"
+        style="width:100%; object-fit: contain; height: 100%;">
+    </div>
 
     <!-- <div class="registro">
       <h2>Registro</h2>
@@ -124,7 +130,7 @@
   <div id="myModal" class="modal">
     <div class="modal-content">
       <!--x para cerrar el modal-->
-       <span class="close">&times;</span> 
+      <span class="close">&times;</span>
       <div class="registro">
         <h2>Registro</h2>
         <form action="login.html">
@@ -136,7 +142,7 @@
       </div>
     </div>
   </div>
- 
+
   <script>
 
     // obtiene el modal
@@ -163,4 +169,5 @@
 </body>
 <script src="Usuarios.js"></script>
 <script src="registro.js"></script>
+
 </html>
