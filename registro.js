@@ -1,27 +1,21 @@
-// Importamos la librería de JQuery
-const $ = require("jquery");
 
-// Función para registrar los usuarios
-function registrarUsuario() {
-  // captura de los datos del formulario
-  const usuario = $("#usuario").val();
-  const contraseña = $("#contraseña").val();
+    function login() {
+  const username = document.querySelector("input[name=username]").value;
+  const password = document.querySelector("input[name=password]").value;
 
-  // creamos un nuevo objeto JSON con los datos del usuario nuevo
-  const nuevoUsuario = {
-    usuario,
-    contraseña,
-  };
+  // Validar datos
+  if (!username || !password) {
+    alert("Debes ingresar un nombre de usuario y una contraseña.");
+    return;
+  }
 
-  // se agrega el nuevo usuario al arreglo de usuarios nuevos
-  dataLogin.push(nuevoUsuario);
+  // Guardar datos en el local storage
+  localStorage.setItem("username", username);
+  localStorage.setItem("password", password);
 
-  // se guardan los datos de los usuarios en local storage y se convierte a string
-  localStorage.setItem("dataLogin", JSON.stringify(dataLogin));
-
-  // se redirige a la página de login
-  window.location.href = "login.html";
+  // Redireccionar a la página principal
+  window.location.href = "index.html";
 }
 
-// se llama a la función registrarUsuario()
-$("#registrar").on("click", registrarUsuario);
+document.querySelector("form").addEventListener("submit", login);
+
