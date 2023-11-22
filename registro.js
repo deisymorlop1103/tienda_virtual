@@ -1,8 +1,10 @@
-class login {
+// Clase para almacenar los usuarios registrados
+class Usuarios {
   constructor() {
     this.usuarios = [];
   }
 
+  // Añade un nuevo usuario a la lista
   registrarUsuario(nombre, correo, contrasena) {
     const usuario = {
       nombre,
@@ -19,24 +21,19 @@ class login {
     localStorage.setItem("usuarios", usuariosJson);
   }
 
-  iniciarSesion(correo, contrasena) {
-    // Recorremos los usuarios registrados
-    for (const usuario of this.usuarios) {
-      // Si el correo y la contraseña coinciden
-      if (usuario.correo === correo && usuario.contrasena === contrasena) {
-        // Sesión iniciada
-        console.log("Sesión iniciada");
-        return true;
-      }
-    }
+  // Comprueba si el usuario existe
+  existeUsuario(correo) {
+    return this.usuarios.some((usuario) => usuario.correo === correo);
+  }
 
-    // Sesión no iniciada
-    console.log("Sesión no iniciada");
-    return false;
+  // Comprueba si las credenciales son correctas
+  credencialesCorrectas(correo, contrasena) {
+    return this.existeUsuario(correo) && this.usuarios.find((usuario) => usuario.correo === correo).contrasena === contrasena;
   }
 }
 
-const login = new Login();
+// Instancia de la clase Usuarios
+const usuarios = new Usuarios();
 
 // Registro de usuario
 document.querySelector(".registro form").addEventListener("submit", (e) => {
@@ -46,7 +43,7 @@ document.querySelector(".registro form").addEventListener("submit", (e) => {
   const correo = document.querySelector(".registro input[name='correo']").value;
   const contrasena = document.querySelector(".registro input[name='contrasena']").value;
 
-  login.registrarUsuario(nombre, correo, contrasena);
+  usuarios.registrarUsuario(nombre, correo, contrasena);
 });
 
 // Inicio de sesión
@@ -56,7 +53,7 @@ document.querySelector(".login form").addEventListener("submit", (e) => {
   const correo = document.querySelector(".login input[name='correo']").value;
   const contrasena = document.querySelector(".login input[name='contrasena']").value;
 
-  const inicioSesionExitosa = login.iniciarSesion(correo, contrasena);
+  const inicioSesionExitosa = usuarios.credencialesCorrectas(correo, contrasena);
 
   if (inicioSesionExitosa) {
     // Redirigir a la página principal
