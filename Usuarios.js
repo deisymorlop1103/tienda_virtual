@@ -56,7 +56,7 @@ document.querySelector(".login form").addEventListener("submit", (e) => {
   const inicioSesionExitosa = usuarios.credencialesCorrectas(correo, contrasena);
 
   if (inicioSesionExitosa) {
-    // Redirigir a la página principal
+    // Redirigir a la página home
     window.location.href = "/";
   }
 });
