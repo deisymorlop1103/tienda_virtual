@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Login y registro</title>
 </head>
 <body>
 
   <style>
+    body {
+  font-family: sans-serif;
+}
 .container {
-  width: 300px;
+  width: 500px;
   margin: 0 auto;
 }
-h1 {
-  text-align: center;
+.registro,
+.login {
+  padding: 20px;
+}
+h1,
+h2 {
+  font-size: 20px;
+}
+form {
+  margin-bottom: 20px;
 }
 input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  border: 1px solid #ccc;
 }
 input[type="submit"] {
   background-color: #000;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
   cursor: pointer;
 }
-</style>
+  </style>
   
   <div class="container">
-    <form action="login" method="post">
-      <h1>Registro</h1>
-      <input type="text" name="nombre" placeholder="Nombre">
-      <input type="email" name="correo" placeholder="Correo electrónico">
-      <input type="password" name="contraseña" placeholder="Contraseña">
-      <input type="submit" value="Registrar">
-    </form>
+    <h1>Login y registro</h1>
+
+    <div class="registro">
+      <h2>Registro</h2>
+      <form action="#">
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="email" name="correo" placeholder="Correo electrónico">
+        <input type="password" name="contrasena" placeholder="Contraseña">
+        <input type="submit" value="Registrar">
+      </form>
+    </div>
+
+    <div class="login">
+      <h2>Login</h2>
+      <form action="#">
+        <input type="email" name="correo" placeholder="Correo electrónico">
+        <input type="password" name="contrasena" placeholder="Contraseña">
+        <input type="submit" value="Iniciar sesión">
+      </form>
+    </div>
   </div>
+
 </body>
 </html>
