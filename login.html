@@ -1,126 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Login y registro</title>
 </head>
+
 <body>
 
   <style>
-    
-  body {
-  font-family: sans-serif;
-}
+    body {
+      font-family: sans-serif;
+    }
 
-.container {
-  width: 500px;
-  margin: 0 auto;
-}
+    .container {
+      width: 500px;
+      margin: 0 auto;
+    }
 
-.registro,
-.login {
-  padding: 20px;
-}
+    .registro,
+    .login {
+      padding: 20px;
+    }
 
-h1,
-h2 {
-  font-size: 20px;
-}
+    h1,
+    h2 {
+      font-size: 20px;
+    }
 
-form {
-  margin-bottom: 20px;
-}
+    form {
+      margin-bottom: 20px;
+    }
 
-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
 
-input[type="submit"] {
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-}
+    input[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-</style>
-      
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
   <div class="container">
     <h1>Login</h1>
 
-
-
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-
-
-    <div class="registro">
-      <h2>Registro</h2>
-      <form action="login.html">
-        <input type="text" name="nombre" placeholder="Nombre">
-        <input type="email" name="correo" placeholder="Correo electrónico">
-        <input type="password" name="contrasena" placeholder="Contraseña">
-        <input type="submit" value="Registrar">
-      </form>
-    </div>
-
-
-
-
-  </div>
-
-</div>
-
-
-
-
-   <!-- <div class="registro">
+    <!-- <div class="registro">
       <h2>Registro</h2>
       <form action="login.html">
         <input type="text" name="nombre" placeholder="Nombre">
@@ -139,51 +115,50 @@ input[type="submit"] {
       </form>
     </div>
   </div>
-   <a href="registro.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" >Crear cuenta </a>
 
+  <!-- Botón para abrir el modal -->
+  <button id="myBtn">Registrarse </button>
+  <!-- div para contener el modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <!--x para cerrar el modal-->
+       <span class="close">&times;</span> 
+      <div class="registro">
+        <h2>Registro</h2>
+        <form action="login.html">
+          <input type="text" name="nombre" placeholder="Nombre">
+          <input type="email" name="correo" placeholder="Correo electrónico">
+          <input type="password" name="contrasena" placeholder="Contraseña">
+          <input type="submit" value="Registrar">
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
 
-
-
-
-<script>
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-</script>
-
-
-
-
-
-
-
-  </body>
-
-  <script src="Usuarios.js"></script>
-  <script src="registro.js"></script>
+    // obtiene el modal
+    var modal = document.getElementById("myModal");
+    // obtiene el botón que abre el modal
+    var btn = document.getElementById("myBtn");
+    // obtiene la x que cierra el modal desde la X
+    var span = document.getElementsByClassName("close")[0];
+    //permite abrir el botón al dar click
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+    // Cuando el usuario 
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    // Al dar click por fuera del modal se cierra
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+<script src="Usuarios.js"></script>
+<script src="registro.js"></script>
 </html>
