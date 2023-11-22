@@ -1,20 +1,22 @@
-function login() {
-  const username = document.querySelector("input[name=username]").value;
-  const password = document.querySelector("input[name=password]").value;
+function registrarUsuario() {
+  // Obtenemos los datos del formulario
+  const nombre = document.querySelector("input[name='nombre']").value;
+  const correo = document.querySelector("input[name='correo']").value;
+  const contraseña = document.querySelector("input[name='contraseña']").value;
 
-  // Validar datos
-  if (!username || !password) {
-    alert("Debes ingresar un nombre de usuario y una contraseña.");
-    return;
-  }
+  // Convertimos los datos a JSON
+  const usuario = {
+    nombre,
+    correo,
+    contraseña,
+  };
 
-  // Guardar datos en el local storage
-  localStorage.setItem("username", username);
-  localStorage.setItem("password", password);
+  // Almacenamos los datos en el local storage
+  localStorage.setItem("usuario", JSON.stringify(usuario));
 
-  // Redireccionar a la página principal
+  // Redirigimos a la página principal
   window.location.href = "index.html";
 }
 
-document.querySelector("form").addEventListener("submit", login);
-
+// Evento del botón de envío
+document.querySelector("input[type='submit']").addEventListener("click", registrarUsuario);
