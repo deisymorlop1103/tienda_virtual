@@ -10,7 +10,6 @@ function registrarUsuario() {
     correo,
     contraseña,
   };
-
   // Almacenamos los datos en el local storage
   localStorage.setItem("usuario", JSON.stringify(usuario));
 
