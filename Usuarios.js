@@ -68,7 +68,7 @@ document.querySelector(".login form").addEventListener("submit", (e) => {
 
 
 
-
+registrarUsuario();
  // Se recuperan los datos en el localStorage
     localStorage.getItem("usuarios", usuariosJson);
 
