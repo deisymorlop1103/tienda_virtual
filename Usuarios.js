@@ -20,7 +20,7 @@ class Usuarios {
     // Almacenamos los datos en el localStorage
     localStorage.setItem("usuarios", usuariosJson);
   }
-
+  
   // Comprueba si el usuario existe
   existeUsuario(correo) {
     return this.usuarios.some((usuario) => usuario.correo === correo);
@@ -60,3 +60,22 @@ document.querySelector(".login form").addEventListener("submit", (e) => {
     window.location.href = "/";
   }
 });
+
+
+
+
+
+
+
+
+
+ // Se recuperan los datos en el localStorage
+    localStorage.getItem("usuarios", usuariosJson);
+
+  const inicioSesion = usuarios.credencialesCorrectas(nombre, contrasena);
+ if (inicioSesion) {
+    // Redirigir a la página home
+    window.location.href = "/";
+   
+   alert(!!Hola + nombre);
+  }
