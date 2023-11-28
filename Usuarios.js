@@ -60,22 +60,3 @@ document.querySelector(".login form").addEventListener("submit", (e) => {
     window.location.href = "/";
   }
 });
-
-
-
-
-
-
-
-
-registrarUsuario();
- // Se recuperan los datos en el localStorage
-    localStorage.getItem("usuarios", usuariosJson);
-
-  const inicioSesion = usuarios.credencialesCorrectas(nombre, contrasena);
- if (inicioSesion) {
-    // Redirigir a la página home
-    window.location.href = "/";
-   
-   alert(!!Hola + nombre);
-  }
